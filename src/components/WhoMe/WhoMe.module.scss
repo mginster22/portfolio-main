@@ -1,0 +1,86 @@
+@import "../../common/style/templates";
+@import "../../common/style/colors";
+.who_me {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../assets/images/bg-light.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 90vh;
+  position: relative;
+  h1 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 7rem;
+    font-size: 5rem;
+    @extend %font-family;
+    font-weight: bold;
+    margin-left: 50px;
+  }
+}
+.who_me_light {
+  background-image: url("../../assets/images/bg-dark.png");
+}
+.link {
+  display: block;
+  position: absolute;
+  bottom: 19%;
+  z-index: 999999;
+  border: 1px solid $color-sub-main;
+  max-width: 200px;
+  width: 100%;
+  padding: 15px;
+  @extend %font-family;
+  text-align: center;
+  color: $color-sub-main;
+  box-shadow: 1px 0px 8px 3px rgba(0, 0, 0, 0.47);
+  transition: all 300ms ease;
+  &:hover {
+    background-color: black;
+    color: white;
+    border: none;
+  }
+}
+.scrol_text_left,
+.scrol_text_right {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  writing-mode: vertical-lr;
+  bottom: -60px;
+}
+.scrol_text_left {
+  left: 10px;
+}
+.scrol_text_right {
+  right: 10px;
+}
+@media screen and (max-width: "1024px") {
+  .who_me {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: "768px") {
+  .who_me {
+    background-image: url("../../assets/images/bg-light-768.png");
+    background-position: top left;
+    h1 {
+      margin-left: 0;
+    }
+  }
+  .who_me_light {
+    background-image: url("../../assets/images/bg-dark-768.png");
+  }
+
+  .link {
+    bottom: 44%;
+  }
+  .scrol_text_left,
+  .scrol_text_right {
+    bottom: 50px;
+  }
+}

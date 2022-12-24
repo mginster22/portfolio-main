@@ -1,0 +1,137 @@
+@import "../../common/style/colors";
+@import "../../common/style/templates";
+.portfolio {
+  background-image: url("../../assets/images/bg-light-big.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  max-height: 100vh;
+  height: 100%;
+  margin-top: 50px;
+}
+.portfolio_dark {
+  background-image: url("../../assets/images/bg-black-big.png");
+}
+.title {
+  padding-top: 120px;
+  font-size: 5rem;
+  color: $color-sub-main;
+  @extend %font-family;
+}
+.title + p {
+  margin-top: 20px;
+  margin-left: 10px;
+  max-width: 500px;
+  font-size: 1.5rem;
+  @extend %font-family;
+}
+.list {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+  min-height: 230px;
+  max-height: 230px;
+  height: 100%;
+  transition: all 0.5s ease;
+  .button_view {
+    position: absolute;
+    left: 25%;
+    top: 30%;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 50%;
+    background-color: rgba(171, 170, 170, 0.852);
+    @extend %font-family;
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+    height: 0;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+  .avatar {
+    top: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease;
+  }
+}
+.card:hover .avatar {
+  background: none;
+}
+.card:hover .button_view {
+  opacity: 1;
+}
+
+.scroll_arrow_up {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  background-color: transparent;
+  border: none;
+  padding: 10px 10px;
+  transition: all 400ms ease;
+  background-color: rgba(128, 128, 128, 0.169);
+
+  &:hover {
+    background-color: rgba(128, 128, 128, 0.467);
+  }
+}
+@media screen and (max-width: "1024px") {
+  .card {
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: "768px") {
+  .list {
+    margin-left: 40px;
+  }
+  .card {
+    max-width: 300px;
+    min-height: 150px;
+    max-height: 150px;
+    width: 100%;
+  }
+  .portfolio {
+    margin-top: 0;
+    background-position: top right;
+  }
+  .title {
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: "420px") {
+  .title {
+    font-size: 3rem;
+  }
+  .title + P {
+    font-size: 1.2rem;
+  }
+  .list {
+    margin-left: 0;
+    padding-right: 20px;
+  }
+  .card {
+    max-width: 360px;
+    min-height: 150px;
+    max-height: 150px;
+    width: 100%;
+
+    .button_view {
+      left: 13%;
+    }
+  }
+  .scroll_arrow_up {
+    bottom: 130px;
+    padding: 5px 5px;
+  }
+}

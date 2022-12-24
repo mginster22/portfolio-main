@@ -1,0 +1,191 @@
+@import "../../common/style/colors";
+@import "../../common/style/templates";
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.switcher {
+  display: flex;
+  justify-content: flex-end;
+  z-index: 99999;
+}
+.menu {
+  width: 180px;
+  height: 100vh;
+  position: fixed;
+  background-color: #231f20;
+
+  z-index: 3;
+  box-shadow: 10px 10px 25px #333333;
+
+  .logo {
+    max-width: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .list {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @extend %font-family;
+
+    .list_item {
+      padding: 15px 0;
+      border-bottom: 1px solid gray;
+      text-align: center;
+      transition: all 0.4s ease;
+      letter-spacing: 1px;
+      font-weight: bold;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.835);
+        color: white;
+      }
+    }
+    .list_item:nth-child(1) {
+      border-top: 1px solid gray;
+      padding-top: 20px;
+    }
+    .list_item a {
+      display: block;
+      padding: 5px 5px;
+    }
+  }
+  .social {
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    a {
+      cursor: pointer;
+    }
+  }
+}
+
+.menu_light {
+  background-color: #fbfaf9;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  position: fixed;
+  right: 10px;
+  top: 20px;
+  /* Hide default HTML checkbox */
+
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 40px;
+    width: 40px;
+    left: 2px;
+    bottom: 4px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    box-shadow: 0 0px 15px #2020203d;
+    background: white url("https://i.ibb.co/7JfqXxB/sunny.png");
+    background-repeat: no-repeat;
+
+    background-position: center;
+  }
+
+  input:checked + .slider {
+    background-color: white;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px white;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    transform: translateX(24px);
+    background: black url("https://i.ibb.co/FxzBYR9/night.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+}
+@media screen and (max-width: "768px") {
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 120px;
+    padding: 0 10px;
+    bottom: 0;
+    .logo {
+      max-width: 110px;
+      width: 100%;
+      object-fit: cover;
+    }
+    .list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 0;
+      .list_item {
+        padding: 0;
+        border: none;
+      }
+      .list_item:nth-child(1) {
+        padding-top: 0;
+        border-top: none;
+      }
+    }
+    .social {
+      margin-top: 0;
+    }
+  }
+}
+@media screen and (max-width: "420px") {
+  .menu {
+    height: 100px;
+    .logo{
+     max-width: 90px;
+    }
+    .list{
+      font-size: 13px;
+    }
+    .social {
+      display: flex;
+      flex-direction: column;
+      gap:0;
+    }
+  }
+}

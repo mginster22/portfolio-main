@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is JavaScript?",
+    "answer": "JavaScript is a multi-paradigm programming language. Supports object-oriented, imperative and functional styles. It is an implementation of the ECMAScript specification."
+  },
+  {
+    "question": "What is React?",
+    "answer": "React is an open source JavaScript library for developing user interfaces. React is developed and maintained by Facebook, Instagram, and a community of individual developers and corporations. React can be used to develop single page and mobile apps"
+  },
+  {
+    "question": "Redux is?",
+    "answer": "Redux — библиотека для JavaScript с открытым исходным кодом, предназначенная для управления состоянием приложения. Чаще всего используется в связке с React или Angular для разработки клиентской части. Содержит ряд инструментов, позволяющих значительно упростить передачу данных хранилища через контекст"
+  },
+  {
+    "question": "How much do you need to study to start working?",
+    "answer": "In general, don't count on it. Therefore, approximately to learn the basics of programming, it will take from 3 months to 1 year. More than a year of training without practice is already too much."
+  },
+  {
+    "question": "How not to burn out while studying?",
+    "answer": "The main advice is that you need to be able to balance between total dedication to the cause and maintaining good physical and psychological well-being."
+  }
+]

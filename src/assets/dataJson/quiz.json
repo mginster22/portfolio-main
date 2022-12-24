@@ -1,0 +1,18 @@
+[
+  {
+    "title": "React is it?",
+    "variants": ["Library", "Framework", "Language"],
+    "correct": 0
+  },
+  {
+    "title": "JS is it?",
+    "variants": ["Library", "Framework", "Language"],
+    "correct": 2
+  },
+  {
+    "title": "What is css responsible for?",
+    "variants": ["Style", "Text", "Script"],
+    "correct": 0
+  }
+  
+]

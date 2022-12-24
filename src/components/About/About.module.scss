@@ -1,0 +1,25 @@
+@import '../../common/style/colors';
+@import '../../common/style/templates';
+.about_me{
+  background-image:url('../../assets/images/bg-light-big.png');
+  background-size:cover;
+  height: 100vh;
+}
+.about_me_dark{
+  background-image:url('../../assets/images/bg-black-big.png');
+}
+.wrapper{
+  padding: 140px 0;
+  h2{
+    font-size: 5rem;
+    @extend %font-family;
+    color:$color-sub-main;
+  }
+  p{
+    max-width: 600px;
+    @extend %font-family;
+    font-size: 1.4rem;
+    line-height: 2rem;
+
+  }
+}
