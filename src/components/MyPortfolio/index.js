@@ -6,6 +6,7 @@ import bike from "../../assets/images/bike.png";
 import squad from "../../assets/images/squad.png";
 import anim from "../../assets/images/bgimage.png";
 import todo from "../../assets/images/todo.png";
+import estet from "../../assets/images/T.png";
 import { FaArrowUp } from "react-icons/fa";
 import styles from "./MyPortfolio.module.scss";
 import { motion } from "framer-motion";
@@ -16,6 +17,7 @@ const MyPortfolio = ({ theme }) => {
     "https://github.com/mginster22/pagesqdlhepl",
     "https://github.com/mginster22/fd-todolist-project",
     "https://animationproject-fbd98.web.app/",
+    "https://estetshop-efae9.web.app/",
   ];
   const portfolioTheme = cx(styles.portfolio, {
     [styles.portfolio_dark]: theme === "dark",
@@ -60,6 +62,7 @@ const MyPortfolio = ({ theme }) => {
         initial="hidden"
       >
         <Card src={anim} href={data[4]} myPortfolioView={myPortfolioView} />
+        <Card src={estet} href={data[5]} myPortfolioView={myPortfolioView} />
         <Card src={greensit} href={data[0]} myPortfolioView={myPortfolioView} />
         <Card src={bike} href={data[1]} myPortfolioView={myPortfolioView} />
         <Card src={squad} href={data[2]} myPortfolioView={myPortfolioView} />
